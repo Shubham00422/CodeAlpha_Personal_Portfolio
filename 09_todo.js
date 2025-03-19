@@ -25,11 +25,14 @@ function renderTasks() {
     taskList.innerHTML = '';  
     
     tasks.forEach((task, index) => {
-        taskList.innerHTML += 
+        taskList.innerHTML += `
             <li>
                 ${task}
                 <button onclick="deleteTask(${index})">Delete</button>
             </li>
-        ;
+        `;
     });
 }
+
+
+window.onload = renderTasks;
